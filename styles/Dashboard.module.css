@@ -1,0 +1,331 @@
+.mainContainer {
+    position: absolute;
+    display: flex;
+    padding: 30px;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(197, 55, 55, 0.5) 15.95%, rgba(220, 161, 71, 0.5) 52.99%, rgba(20, 213, 239, 0.5) 98.26%);
+}
+
+.sideBar > h1 {
+    padding: 10px;
+}
+
+.sideBar {
+    background-color: #C4C4C4;
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 25px;
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+}
+
+.sideBarContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideBarLinks {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoutButton {
+    all: unset;
+    border: none;
+    margin: 10px;
+    background-color: none;
+    cursor: pointer;
+}
+
+.content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.banner {
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    background: linear-gradient(271.57deg, #919BF6 1.36%, #97A1FF 97.89%);
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.85), inset 28px 28px 54px rgba(255, 255, 255, 0.51), inset -28px -28px 54px rgba(0, 0, 0, 0.25), inset -16px -16px 14px -14px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner > h1 {
+    max-width: 60%;
+}
+
+.banner > button {
+    font-weight: 800;
+    border: none;
+    background-color: #ffff;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    border-radius: 12px;
+    padding: 10px 50px;
+    margin-right: 10%;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cardsRow1{
+    flex: 1;
+    margin-top: 5px;
+    display: flex;
+}
+
+.achievementCard{
+    flex: 2;
+    background: linear-gradient(271.57deg, #BA4848 1.36%, #D65555 97.89%);
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.29), inset 28px 28px 54px rgba(255, 255, 255, 0.15), inset -28px -28px 54px rgba(0, 0, 0, 0.25), inset -16px -16px 14px -14px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 10px;
+    color: #ffff;
+    margin-right: 10px;
+}
+
+.achievementHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.achievementTitle {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.achievementBody {
+    display: flex;
+}
+
+.mathsCard {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(321.26deg, #323232 1.96%, #484848 98.8%);
+    border-radius: 12px;
+    padding: 0 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.mathImg{
+    position: absolute;
+    right: -15%;
+    top: 25%;
+    width: 300px;
+}
+
+.progressCardsContainer{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.progressCard1 {
+    flex: 1;
+    background: #000000;
+    padding: 10px;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+}
+
+.progressCard1 > h2, .progressCard2 > h2{
+    max-width: 50%;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.progressCard1 > p, .progressCard2 > p{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.progressCard1 > p > b {
+    color: #28D0E7;
+}
+
+.progressCard2 > p > b {
+    color: #FA6C32;
+}
+
+.progressCard2{
+    flex: 1;
+    background: #C4E0E9;
+    padding: 10px;
+    position: relative;
+    color: #000;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+
+.cardsRow2 {
+    flex: 1;
+    margin-top: 5px;
+    display: flex;
+}
+
+.physicsCard {
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 800;
+    min-width: 200px;
+    background: linear-gradient(271.57deg, #6BA9BE 1.36%, #B5DFED 97.89%);
+    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.29), inset 28px 28px 54px rgba(255, 255, 255, 0.15), inset -28px -28px 54px rgba(0, 0, 0, 0.14);
+}
+
+.phyImg {
+    position: absolute;
+    left: 0px;
+    top: 20%;
+    width: 250px;
+}
+
+.discoverCard {
+    flex: 2;
+    border-radius: 12px;
+    background-color: #F3B62D;
+    margin-left: 10px;
+}
+
+.discoverCard > p {
+    all: unset;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px;
+    color: #414141;
+}
+
+.discoverSubject {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 10px;
+    color: #414141;
+}
+
+.discoverText > h1 {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.discoverText > p {
+    font-size: 12px;
+    word-wrap: break-word;
+    white-space:pre-wrap;
+    max-width: 200px;
+}
+
+.rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.suggestionsContainer {
+    flex: 1;
+    background-color: #C4C4C4;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+}
+
+.suggestionsContainer > p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.suggestions {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.suggestion {
+    background-color: #414141;
+    border-radius: 12px;
+    margin: 2px;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.suggestion:hover {
+    transform: scale(102%, 102%);
+}
+
+.suggestion > h1 {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.suggestion > p {
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.graphContainer {
+    flex: 1;
+    padding: 10px;
+    background-color: #C4C4C4;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+}
+
+.achievementCard, .mathsCard, .progressCard1,
+.progressCard2, .physicsCard, .discoverCard,
+.graphContainer {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.achievementCard:hover, .mathsCard:hover, .progressCard1:hover,
+.progressCard2:hover, .physicsCard:hover, .discoverCard:hover,
+.graphContainer:hover {
+    transform: scale(102%, 102%);
+}

@@ -1,0 +1,31 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+.navbar h1 {
+    all: unset;
+    font-family: 'Poppins';
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navbar a {
+    cursor: pointer;
+    border: none;
+    background-color: #DFDFDF;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
