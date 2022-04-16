@@ -1,3 +1,4 @@
+import React from "react";
 import { useAuth } from "../context/AuthContext";
 import navBar from "./components/navBar";
 import styles from "../styles/biologySubject.module.css"

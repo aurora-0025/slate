@@ -1,3 +1,4 @@
+import React from "react";
 import { useAuth } from '../context/AuthContext';
 import styles from '../styles/Home.module.css'
 import navBar from './components/navBar'
