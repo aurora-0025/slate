@@ -1,0 +1,114 @@
+.app {
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    min-height: 200px;
+    height: min-content;
+    background: #FF9A71;
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .scoreSection {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 24px;
+    align-items: center;
+  }
+
+  .endButton{
+    all: unset;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #FA6C32;
+    padding: 10px 40px;
+    border-radius: 12px;
+  }
+  
+  /* QUESTION/TIMER/LEFT SECTION */
+  .questionSection {
+    color: #fff;
+    width: 100%;
+    position: relative;
+  }
+  
+  .questionCount {
+    margin-bottom: 20px;
+  }
+  
+  .questionCount span {
+    font-size: 28px;
+  }
+  
+  .question-text {
+    margin-bottom: 12px;
+  }
+  
+  .timer-text {
+    background: rgb(230, 153, 12);
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 5px solid rgb(255, 189, 67);
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  /* ANSWERS/RIGHT SECTION */
+  .answerSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .button {
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 5px;
+    background: #FF9A71;
+    border: 3px solid #FA6C32;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .correct {
+    border: #11E1A6;
+  }
+  
+  .incorrect {
+    border: #ff3333;
+  }
+  
+  .button:hover {
+    background-color: #FBA988;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .button svg {
+    margin-right: 5px;
+  }

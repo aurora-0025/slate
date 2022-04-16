@@ -8,7 +8,10 @@
 }
 
 .sideBar > h1 {
-    padding: 10px;
+    all: unset;
+    font-size: 40px;
+    margin: 10px 0px;
+    cursor: pointer;
 }
 
 .sideBar {
@@ -33,6 +36,22 @@
     align-items: center;
 }
 
+.profilePic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #28D0E7;
+}
+
+.profilePic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
 .sideBarLinks {
     flex: 1;
     display: flex;
@@ -56,7 +75,7 @@
 
 .banner {
     margin: 10px 0;
-    padding: 10px;
+    padding: 10px 40px;
     display: flex;
     background: linear-gradient(271.57deg, #919BF6 1.36%, #97A1FF 97.89%);
     box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.85), inset 28px 28px 54px rgba(255, 255, 255, 0.51), inset -28px -28px 54px rgba(0, 0, 0, 0.25), inset -16px -16px 14px -14px rgba(0, 0, 0, 0.25);
@@ -98,6 +117,9 @@
     background: linear-gradient(271.57deg, #BA4848 1.36%, #D65555 97.89%);
     box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.29), inset 28px 28px 54px rgba(255, 255, 255, 0.15), inset -28px -28px 54px rgba(0, 0, 0, 0.25), inset -16px -16px 14px -14px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 10px;
     color: #ffff;
     margin-right: 10px;
@@ -109,12 +131,14 @@
 }
 
 .achievementTitle {
-    font-size: 16px;
+    all: unset;
+    font-size: 26px;
     font-weight: 200;
 }
 
 .achievementBody {
     display: flex;
+    justify-content: space-around;
 }
 
 .mathsCard {
@@ -220,6 +244,9 @@
 
 .discoverCard > p {
     all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 800;
@@ -228,26 +255,35 @@
 }
 
 .discoverSubject {
+    all:unset;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-left: 50px;
     padding-right: 10px;
+    padding-top: 10px;
     color: #414141;
 }
 
 .discoverText > h1 {
-    box-sizing: border-box;
-    font-size: 16px;
+    all:unset;
+    font-size: 26px;
     font-weight: 700;
     text-align: left;
 }
 
 .discoverText > p {
-    font-size: 12px;
+    font-size: 18px;
     word-wrap: break-word;
     white-space:pre-wrap;
     max-width: 200px;
+}
+
+.discoverSubject > img{
+    background-color: #323232;
+    width: 450px;
+    height: 450px;
+    border-radius: 3px;
 }
 
 .rightSection {

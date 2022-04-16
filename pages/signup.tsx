@@ -34,16 +34,65 @@ const SignUp = () =>{
               uid: user.uid,
               displayName: displayName,
               email: user.email,
-              photoURL: user.photoURL
+              photoURL: user.photoURL,
+              quiz: {
+                physics: {
+                  done: false,
+                  marks: 0,
+                  course1Marks: 0,
+                  course2Marks: 0,
+                },
+                chemistry: {
+                  done: false,
+                  marks: 0,
+                  course1Marks: 0,
+                  course2Marks: 0,
+                },
+                biology: {
+                  done: false,
+                  marks: 0,
+                  course1Marks: 0,
+                  course2Marks: 0,
+                },
+                maths: {
+                  done: false,
+                  marks: 0,
+                  course1Marks: 0,
+                  course2Marks: 0,
+                }
+              },
+              progress1:"physics",
+              progress2:"chemistry",
+              courses: {
+                maths:{
+                  completed: 0,
+                  incomplete: 2,
+                  pythagoras_theorem: false,
+                  area_of_triangles: false,
+                },
+                physics:{
+                  completed: 0,
+                  incomplete: 2,
+                  reflection_of_light: false,
+                  ray_optics: false,
+                },
+                chemistry:{
+                  completed: 0,
+                  incomplete: 2,
+                  structure_of_atom: false,
+                  intro_to_organic_chemistry: false,
+                },
+                biology:{
+                  completed: 0,
+                  incomplete: 2,
+                  cell: false,
+                  human_body: false,
+                }
+              }
             }
+            router.push('/dashboard')
             await addDoc(collectionRef, payload)
 
-            router.push(          
-          {
-            pathname: '/dashboard/[uid]',
-            query: { pid: user.uid }
-          }
-  )
           }).catch((error)=>{
             let errorMsg = ''
             switch (error.code) {

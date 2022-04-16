@@ -1,0 +1,79 @@
+.main {
+    margin: 100px 100px 100px 100px;
+}
+
+.main h1 {
+    font-size: 50px;
+    color: #FA6C32;
+}
+
+.coursesContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.course {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background-color: #d9eef5;
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.course:hover {
+    transform: scale(102%);
+}
+
+.shape {
+    position: absolute;
+    top: 10px;
+    right: -45px;
+    transform: rotate(40.11deg);
+    background-color: #FA6C32;
+    padding: 5px 45px;
+    color: white;
+}
+
+.end {
+    margin: 20px 50%;
+    width: 200px;
+    transform: translateX(-50%);
+}
+
+.end > button {
+    padding: 10px 30px;
+    background-color: #FA6C32;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.completed {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.completed > button {
+    all: unset;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    background-color: #AEDBEA;
+    border-radius: 12px;
+    padding: 20px 50px;
+
+}
+
+.end > button:hover {
+    transform: scale(102%);
+}

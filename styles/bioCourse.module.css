@@ -32,6 +32,11 @@
     transform: scale(102%);
 }
 
+.subhead {
+    margin: 30px 0;
+    font-size: 30px;
+}
+
 .para {
     margin: 10px 0px;
     font-size: 26px;
@@ -42,6 +47,11 @@
 }
 
 .ul {
+    margin: 10px 20px;
+    font-size: 26px;  
+}
+
+.ol {
     margin: 10px 20px;
     font-size: 26px;  
 }
@@ -80,4 +90,18 @@
 
 .end > button:hover {
     transform: scale(102%);
+}
+
+.prereq > p {
+    margin: 10px 0px;
+    font-size: 26px;
+}
+.prereq > p > b {
+    color: #FA6C32;
+}
+
+.prereq > ul {
+    margin: 10px 0px;
+    font-size: 26px;
+    color: #FA6C32;
 }

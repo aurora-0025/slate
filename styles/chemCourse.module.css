@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title > h1 {
+    font-size: 66px;
+    color: #FA6C32;
+}
+
+.title > button {
+    padding: 10px 30px;
+    background-color: #FA6C32;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.title > button:hover {
+    transform: scale(102%);
+}
+
+.subhead {
+    margin: 30px 0;
+    font-size: 30px;
+}
+
+.para {
+    margin: 10px 0px;
+    font-size: 26px;
+}
+
+.para > b {
+    color: #FA6C32;
+}
+
+.ul {
+    margin: 10px 20px;
+    font-size: 26px;  
+}
+
+.ol {
+    margin: 10px 20px;
+    font-size: 26px;  
+}
+
+.sign {
+    width: 100%;
+    text-align: right;
+}
+
+.sign h3 {
+    color: #FA6C32;
+}
+
+.image {
+    align-self: center;
+}
+
+.end {
+    align-self: center;
+    text-align: center;
+    margin: 100px;
+}
+
+.end > button {
+    padding: 10px 30px;
+    background-color: #FA6C32;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.end > button:hover {
+    transform: scale(102%);
+}
+
+.prereq > p {
+    margin: 10px 0px;
+    font-size: 26px;
+}
+.prereq > p > b {
+    color: #FA6C32;
+}
+
+.prereq > ul {
+    margin: 10px 0px;
+    font-size: 26px;
+    color: #FA6C32;
+}

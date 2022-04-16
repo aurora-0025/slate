@@ -5,9 +5,10 @@ import { Search as Search24 } from '@carbon/icons-react';
 
 function Search({ details }) {    
   const [searchField, setSearchField] = useState(null);
-  const [searchSubject, setSubject] = useState("mathematics");
+  const [searchSubject, setSubject] = useState("maths");
   const [searchDifficulty, setDifficulty] = useState("easy");
 
+  
     const filteredcourses = details.filter(
     course => {
       return (
@@ -26,6 +27,8 @@ function Search({ details }) {
       );
     }
   );
+
+  
 
   const handleChange = e => {
       if(e.target.value == "")
@@ -60,7 +63,7 @@ function Search({ details }) {
             </div>
             <div className={styles.filters}>
               <select className={styles.subjectFilter} onChange={handleSubject} name="subject">
-                  <option value="mathematics">Maths</option>
+                  <option value="maths">Maths</option>
                   <option value="physics">Physics</option>
                   <option value="biology">Biology</option>
                   <option value="chemistry">Chemistry</option>

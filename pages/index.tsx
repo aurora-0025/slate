@@ -2,7 +2,8 @@ import { useAuth } from '../context/AuthContext';
 import styles from '../styles/Home.module.css'
 import navBar from './components/navBar'
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
+import Link from 'next/link';
 // ..
 
 export default function Home() {
@@ -36,30 +37,38 @@ export default function Home() {
         </div>
     </section>
     <section className={styles.courses}>
-      <div className={styles.physics}>
+      <Link href={'/physics'}>
+        <div className={styles.physics}>
         <h1>Physics</h1>
         <img className={styles.phy1} src="/pages/home/phy1.svg" />
         <img className={styles.phy2} src="/pages/home/phy2.svg" />
         <img className={styles.phy3} src="/pages/home/phy3.svg" />
       </div>
-      <div className={styles.biology}>
-        <h1>Biology</h1>
-        <img className={styles.bio1} src="/pages/home/bio1.svg" />
-        <img className={styles.bio2} src="/pages/home/bio2.svg" />
-        <img className={styles.bio3} src="/pages/home/bio3.svg" />
-      </div>
-      <div className={styles.maths}>
-        <h1>Maths</h1>
-        <img className={styles.math1} src="/pages/home/math1.svg" />
-        <img className={styles.math2} src="/pages/home/math2.svg" />
-        <img className={styles.math3} src="/pages/home/math3.svg" />
-      </div>
+      </Link>
+      <Link href={'/biology'}>
+        <div className={styles.biology}>
+          <h1>Biology</h1>
+          <img className={styles.bio1} src="/pages/home/bio1.svg" />
+          <img className={styles.bio2} src="/pages/home/bio2.svg" />
+          <img className={styles.bio3} src="/pages/home/bio3.svg" />
+        </div>
+      </Link>
+      <Link href={'/maths'}>
+        <div className={styles.maths}>
+          <h1>Maths</h1>
+          <img className={styles.math1} src="/pages/home/math1.svg" />
+          <img className={styles.math2} src="/pages/home/math2.svg" />
+          <img className={styles.math3} src="/pages/home/math3.svg" />
+        </div>
+      </Link>
+      <Link href={'/chemistry'}>
       <div className={styles.chemistry}>
         <h1>Chemistry</h1>
         <img className={styles.chem1} src="/pages/home/chem1.svg" />
         <img className={styles.chem2} src="/pages/home/chem2.svg" />
         <img className={styles.chem3} src="/pages/home/chem3.svg" />
       </div>
+      </Link>
     </section>
 
     </>

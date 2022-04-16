@@ -163,3 +163,12 @@
   left: 150px;
   top: -20px;
 }
+
+.courses > .maths, .courses > .chemistry, .courses > .biology, .courses > .physics {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+} 
+
+.courses > .maths:hover, .courses > .chemistry:hover, .courses > .biology:hover, .courses > .physics:hover {
+  transform: scale(102%);
+}
