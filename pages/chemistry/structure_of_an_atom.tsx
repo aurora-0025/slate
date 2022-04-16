@@ -35,7 +35,7 @@ const StructureOfAnAtom = ()=>{
             </ul>
         </div>
         </div>
-        <img src="src=/pages/chemistry/courses/structureOfAnAtom/soaa1.svg" className={styles.image} />
+        <img src="/pages/chemistry/courses/structureOfAnAtom/soaa1.svg" className={styles.image} />
         <h2>Electrons</h2>
         <div className={styles.ul} >
             <ul>
@@ -56,7 +56,7 @@ const StructureOfAnAtom = ()=>{
                 <li>The black seeds in the watermelon are compared with the electrons which are embedded on it.</li>
             </ul>
         </div>
-        <img src="src=/pages/chemistry/courses/structureOfAnAtom/soaa2.svg" className={styles.image} />
+        <img src="/pages/chemistry/courses/structureOfAnAtom/soaa2.svg" className={styles.image} />
         <h2>Rutherford’s model of an atom</h2>
         <div className={styles.para}>
             Rutherford concluded the model of the atom from the α-particle scattering experiment as:
@@ -68,7 +68,7 @@ const StructureOfAnAtom = ()=>{
                 <li> The size of the nucleus is very small as compared to the size of the atom.</li>
             </ol>
         </div>
-        <img src="src=/pages/chemistry/courses/structureOfAnAtom/soaa3.svg" className={styles.image}/>
+        <img src="/pages/chemistry/courses/structureOfAnAtom/soaa3.svg" className={styles.image}/>
         <h2>Drawbacks of Rutherford’s model</h2>
         <div className={styles.ul}>
             <ul>

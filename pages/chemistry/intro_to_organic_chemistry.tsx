@@ -34,7 +34,7 @@ const IntroToOrganicChemistry = ()=>{
               <li>Tetravalency and small size – Carbon exhibits’ tetravalency. The tetravalency of carbon can be satisfied by forming bonds with carbon, hydrogen or other atoms. The carbon atom has 4 electrons in its valence shell. In order to account tetravalency it is believed during the process of bond formation which is energy-releasing process the two electrons in the 2s orbital get unpaired and out of them, one is promoted to empty orbital.</li>
             </ol>
           </div>
-          <img src="src=/pages/chemistry/courses/introductionToOrganicChemistry/ioc1.svg" className={styles.image} />
+          <img src="/pages/chemistry/courses/introductionToOrganicChemistry/ioc1.svg" className={styles.image} />
           <h2>Structural Representations of Organic Compounds</h2>
           <div className={styles.ol}>
             <ol>
@@ -51,7 +51,7 @@ const IntroToOrganicChemistry = ()=>{
                   <li>Heterocyclic Aromatic Compounds – In the twentieth century it is witnessed that the first inorganic heteroaromatic compound produced in the laboratory. Some of these heterocyclic aromatic compounds are very important in biochemical processes, drugs, and agrochemicals.</li>
               </ol>
           </div>
-          <img src="src=/pages/chemistry/courses/introductionToOrganicChemistry/ioc2.svg" className={styles.image} />
+          <img src="/pages/chemistry/courses/introductionToOrganicChemistry/ioc2.svg" className={styles.image} />
          <h2>Nomenclature of Organic Compounds</h2>
           <div className={styles.ol}>
             <ol>

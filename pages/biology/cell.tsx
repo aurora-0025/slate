@@ -61,7 +61,7 @@ const Cell = ()=>{
              All plants and animals are made of the building blocks we call cells.<br></br><br></br>Many living things consist of vast numbers of cells working in concert with one another.<br></br><br></br>Other forms of life, however, are made of only a single cell, such as the many species of bacteria and protozoa.<br></br><br></br>Cells share many common features, yet they can look wildly different. In fact, cells have adapted over billions of years to a wide array of environments and functional roles.<br></br><br></br>Still, as different as these cells are, they all rely on the same basic strategies to keep the outside out, allow necessary substances in and permit others to leave, maintain their health, and replicate themselves. In fact, these traits are precisely what make a cell a cell.
             </p>
           </div>
-          <img src="src=/pages/biology/courses/cell/c1.svg" className={styles.image} />
+          <img src="/pages/biology/courses/cell/c1.svg" className={styles.image} />
           <h2>What defines a cell?</h2>
           <div className={styles.para}>
             <p>
@@ -80,7 +80,7 @@ const Cell = ()=>{
             This original cell was likely little more than a sac of small organic molecules and RNA-like material that had both informational and catalytic functions.<br></br><br></br>Over time, the more stable DNA molecule evolved to take over the information storage function, whereas proteins, with a greater variety of structures than nucleic acids, took over the catalytic functions. 
             </p>
           </div>
-          <img src="src=/pages/biology/courses/cell/c2.svg" className={styles.image} />
+          <img src="/pages/biology/courses/cell/c2.svg" className={styles.image} />
           <div className={styles.para}>
             <p>
             Of course, prokaryotic cells have continued to evolve as well.<br></br><br></br>Different species of bacteria and archaea have adapted to specific environments, and these prokaryotes not only survive but thrive without having their genetic material in its own compartment.<br /><br />For example, certain bacterial species that live in thermal vents along the ocean floor can withstand higher temperatures than any other organisms on Earth.

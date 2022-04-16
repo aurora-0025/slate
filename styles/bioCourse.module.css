@@ -12,12 +12,12 @@
 
 .title > h1 {
     font-size: 66px;
-    color: #FA6C32;
+    color: #17A47C;
 }
 
 .title > button {
     padding: 10px 30px;
-    background-color: #FA6C32;
+    background-color: #17A47C;
     color: white;
     font-weight: 700;
     font-size: 20px;
@@ -43,7 +43,7 @@
 }
 
 .para > b {
-    color: #FA6C32;
+    color: #17A47C;
 }
 
 .ul {
@@ -62,7 +62,7 @@
 }
 
 .sign h3 {
-    color: #FA6C32;
+    color: #17A47C;
 }
 
 .image {
@@ -77,7 +77,7 @@
 
 .end > button {
     padding: 10px 30px;
-    background-color: #FA6C32;
+    background-color: #17A47C;
     color: white;
     font-weight: 700;
     font-size: 20px;
@@ -97,11 +97,11 @@
     font-size: 26px;
 }
 .prereq > p > b {
-    color: #FA6C32;
+    color: #17A47C;
 }
 
 .prereq > ul {
     margin: 10px 0px;
     font-size: 26px;
-    color: #FA6C32;
+    color: #17A47C;
 }

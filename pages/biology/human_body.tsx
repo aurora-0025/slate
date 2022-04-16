@@ -67,7 +67,7 @@ const HumanBody = ()=>{
             If we were to “break apart” the human body at the microscopic level, then the cell would constitute its most basic unit.<br></br><br></br>The average adult has somewhere between 30 – 40 trillion cells, and an estimated 242 billion new cells are produced every day. When a select group of cells with similar functions come together, it forms a tissue.<br></br><br></br>Tissues cumulate into organs, group of organs form organ systems and eventually, a complete organism.
             </p>
           </div>
-          <img src="src=/pages/biology/courses/cell/hb1.svg" className={styles.image} />
+          <img src="src=/pages/biology/courses/theHumanBody/hb1.svg" className={styles.image} />
         
             <h2>Skeleton</h2>
           <div className={styles.para}>
