@@ -4,7 +4,7 @@ import navBar from "./components/navBar";
 import styles from "../styles/biologySubject.module.css"
 import Link from "next/link";
 
-const biology = ()=>{
+const Biology = ()=>{
   const {user} = useAuth();
 
     return (
@@ -51,4 +51,4 @@ const biology = ()=>{
     )
 }
 
-export default biology;
+export default Biology;

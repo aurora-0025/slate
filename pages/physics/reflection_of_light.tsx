@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 
-const reflectionOfLight = ()=>{
+const ReflectionOfLight = ()=>{
   const {user} = useAuth();
 
   const [User, setUser] = useState<any>({userData: null, id:"initial"})
@@ -142,4 +142,4 @@ const reflectionOfLight = ()=>{
     )
 }
 
-export default reflectionOfLight;
+export default ReflectionOfLight;

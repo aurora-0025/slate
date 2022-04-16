@@ -4,7 +4,7 @@ import navBar from "./components/navBar";
 import styles from "../styles/mathSubject.module.css"
 import Link from "next/link";
 
-const maths = ()=>{
+const Maths = ()=>{
   const {user} = useAuth();
 
     return (
@@ -51,4 +51,4 @@ const maths = ()=>{
     )
 }
 
-export default maths;
+export default Maths;

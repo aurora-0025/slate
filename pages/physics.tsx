@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/clientApp";
 
-const physics = ()=>{
+const Physics = ()=>{
   const {user} = useAuth();
 
   const [User, setUser] = useState<any>({userData: null, id:"initial"})
@@ -77,4 +77,4 @@ const physics = ()=>{
     )
 }
 
-export default physics;
+export default Physics;

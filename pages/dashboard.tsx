@@ -13,7 +13,7 @@ import barChart from './components/BarChart';
 
 
 const Dashboard = () =>{
-    const {user} = useAuth();
+    const {user, logOut} = useAuth();
 
     const [User, setUser] = useState<any>({userData: null, id:"initial"})
   
@@ -40,7 +40,7 @@ const Dashboard = () =>{
                 <div className={styles.sideBarLinks}>
                 </div>
             </div>
-            <Link href="/"><button className={styles.logoutButton}><Logout size={16} />Logout</button></Link>
+            <Link href="/"><button className={styles.logoutButton} onClick={()=> logOut()}><Logout size={16} />Logout</button></Link>
         </div>
         <section className={styles.content}>
             <h1>Welcome Back, {User.userData.displayName}</h1>
@@ -71,14 +71,18 @@ const Dashboard = () =>{
                     </div>
                     </Link>
                     <div className={styles.progressCardsContainer}>
+                        <Link href={`/${User.userData.progress1}`}>
                         <div className={styles.progressCard1}>
-                            <h2>{User.userData.progress1}</h2>
+                            <h2>{User.userData.progress1} Progress</h2>
                             <p className="progress"><b>{User.userData.courses[User.userData.progress1].completed}</b> out of <b>2</b> done</p>
                         </div>
+                        </Link>
+                        <Link href={`/${User.userData.progress2}`}>
                         <div className={styles.progressCard2}>
-                            <h2>{User.userData.progress2}</h2>
+                            <h2>{User.userData.progress2} Progress</h2>
                             <p className="progress"><b>{User.userData.courses[User.userData.progress2].completed}</b> out of <b>2</b> done</p>
                         </div>
+                        </Link>
                     </div>
                </div>
                <div className={styles.cardsRow2}>
@@ -125,7 +129,7 @@ const Dashboard = () =>{
             </div>
             <div className={styles.graphContainer}>
                 <p>Analytics</p>
-                {barChart({userData: User.userData})}
+            {barChart({userData: User.userData})}
                 
                 
             </div>

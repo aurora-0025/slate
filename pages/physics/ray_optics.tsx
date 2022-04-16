@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 
-const rayOptics = ()=>{
+const RayOptics = ()=>{
 
     const {user} = useAuth();
 
@@ -147,4 +147,4 @@ const rayOptics = ()=>{
         ):<div>Loading</div>
         }</>
   )}
-export default rayOptics;
+export default RayOptics;

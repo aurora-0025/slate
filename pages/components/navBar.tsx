@@ -4,7 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import styles from '../../styles/navbar.module.css'
 
 
-function navBar({ buttonText }) {
+function NavBar({ buttonText }) {
 const {logOut} = useAuth();
 
   return (
@@ -12,11 +12,20 @@ const {logOut} = useAuth();
         <Link href="/"><h1>Slate</h1></Link>
         <div className={styles.buttonContainer}>
         {buttonText == "login" &&
-        <a href="/login">{buttonText}</a>
+        <Link href="/login">
+          <div className={styles.but}>{buttonText}</div>
+        </Link>
         }
-      { buttonText != "login" && <>
-        <a href="/dashboard">{buttonText}</a>
-        <a href="/login" onClick={()=>logOut()}>logout</a>
+      { buttonText != "login" && 
+      <>
+        <Link href="/dashboard">
+          <div className={styles.but}>
+            {buttonText}
+            </div>
+          </Link>
+        <Link href="/login">
+          <div className={styles.but} onClick={()=>{logOut()}}>logout</div>
+          </Link>
       </>
       }
       </div>
@@ -26,4 +35,4 @@ const {logOut} = useAuth();
 }
 
 
-export default navBar
+export default NavBar

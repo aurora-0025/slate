@@ -3,7 +3,7 @@ import { useAuth } from "../../context/AuthContext";
 import navBar from "../components/navBar";
 import styles from "../../styles/chemCourse.module.css"
 
-const PythagorasTheorem = ()=>{
+const StructureOfAnAtom = ()=>{
   const {user} = useAuth();
 
   return (
@@ -88,4 +88,4 @@ const PythagorasTheorem = ()=>{
         </div>
     </>
   )}
-export default PythagorasTheorem;
+export default StructureOfAnAtom;

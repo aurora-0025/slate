@@ -1,10 +1,10 @@
 import {signInWithEmailAndPassword } from 'firebase/auth';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
 import { auth } from '../firebase/clientApp';
 import styles from '../styles/Login.module.css'
 import {ArrowLeft} from '@carbon/icons-react'
+import Link from 'next/link';
 
 
 const Login = () =>{
@@ -52,7 +52,7 @@ const Login = () =>{
 
     return (
       <div className={styles.loginForm}>
-        <a href="/"><ArrowLeft size={32} className={styles.backButton} /></a>
+        <Link href="/"><ArrowLeft size={32} className={styles.backButton} /></Link>
         <h2>Login</h2>
         <p>Login to access all features of Slate.</p>
         <form onSubmit={handleLogin}>

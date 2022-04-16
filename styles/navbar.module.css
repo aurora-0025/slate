@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-.navbar a {
+.but {
     cursor: pointer;
     border: none;
     background-color: #DFDFDF;
@@ -28,4 +28,9 @@
     border-radius: 12px;
     padding: 10px 20px;
     margin: 0 5px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
 }

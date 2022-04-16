@@ -9,7 +9,7 @@ const controllers:any = Object.values(Chartjs).filter(
 
 Chart.register(...controllers);
 
-function barChart({userData}) {
+function BarChart({userData}) {
   return (
     <div>
         <Bar data={{
@@ -32,4 +32,4 @@ function barChart({userData}) {
 }
 
 
-export default barChart;
+export default BarChart;

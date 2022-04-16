@@ -4,7 +4,10 @@
     padding: 30px;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(180deg, rgba(197, 55, 55, 0.5) 15.95%, rgba(220, 161, 71, 0.5) 52.99%, rgba(20, 213, 239, 0.5) 98.26%);
+    /* background: linear-gradient(180deg, rgba(197, 55, 55, 0.5) 15.95%, rgba(220, 161, 71, 0.5) 52.99%, rgba(20, 213, 239, 0.5) 98.26%); */
+    background-image: url("/pages/dashboard/dashbg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sideBar > h1 {
@@ -18,14 +21,16 @@
     background-color: #C4C4C4;
     width: 150px;
     margin-right: 10px;
-    border-radius: 25px;
     flex: 0.65;
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(35px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    
+    border-radius: 25px;
 }
 
 .sideBarContainer {
@@ -78,7 +83,7 @@
     padding: 10px 40px;
     display: flex;
     background: linear-gradient(271.57deg, #919BF6 1.36%, #97A1FF 97.89%);
-    box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.85), inset 28px 28px 54px rgba(255, 255, 255, 0.51), inset -28px -28px 54px rgba(0, 0, 0, 0.25), inset -16px -16px 14px -14px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 28px 28px 54px rgba(255, 255, 255, 0.51), inset -28px -28px 54px rgba(0, 0, 0, 0.25), inset -16px -16px 14px -14px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     justify-content: space-between;
     align-items: center;
@@ -298,12 +303,15 @@
     background-color: #C4C4C4;
     margin-left: 10px;
     margin-bottom: 5px;
-    border-radius: 25px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(35px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: 25px;
 }
 
 .suggestionsContainer > p {
@@ -346,11 +354,14 @@
     background-color: #C4C4C4;
     margin-left: 10px;
     margin-top: 5px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(35px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
 }
 
 .achievementCard, .mathsCard, .progressCard1,

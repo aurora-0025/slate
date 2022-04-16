@@ -1,3 +1,4 @@
+import React from "react";
 import { useRouter } from 'next/router'
 import { AuthContextProvider } from '../context/AuthContext'
 import '../styles/globals.css'

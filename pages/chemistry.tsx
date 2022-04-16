@@ -4,7 +4,7 @@ import navBar from "./components/navBar";
 import styles from "../styles/chemSubject.module.css"
 import Link from "next/link";
 
-const chemistry = ()=>{
+const Chemistry = ()=>{
   const {user} = useAuth();
 
     return (
@@ -51,4 +51,4 @@ const chemistry = ()=>{
     )
 }
 
-export default chemistry;
+export default Chemistry;
