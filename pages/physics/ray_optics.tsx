@@ -25,8 +25,10 @@ const RayOptics = ()=>{
        User.userData.courses.physics.ray_optics = false;
        User.userData.courses.physics.completed -= 1;
        User.userData.courses.physics.incomplete += 1;
-       User.userData.progress2 = User.userData.progress1;
-       User.userData.progress1 = "physics";
+       if(User.userData.progress1 != User.userData.progress2){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "physics";
+       }
   
       await setDoc(doc(db, "users", User.id), User.userData);
     }
