@@ -29,12 +29,14 @@ const SignUp = () =>{
         createUserWithEmailAndPassword(auth, email, password).then(async(userCredential) => {
             const user = userCredential.user;
             console.log(user);
+            const images = ['https://media.discordapp.net/attachments/869804794917818449/965124680920997908/unknown-removebg-preview_6.png', 'https://media.discordapp.net/attachments/869804794917818449/965124160688889876/unknown-removebg-preview_4.png', 'https://media.discordapp.net/attachments/869804794917818449/965123979088113734/unknown-removebg-preview_3.png', 'https://cdn.discordapp.com/attachments/869804794917818449/965123735495508018/unknown-removebg-preview_2.png', 'https://media.discordapp.net/attachments/869804794917818449/965123644458168330/unknown-removebg-preview_1.png', 'https://media.discordapp.net/attachments/869804794917818449/965123551311065118/unknown-removebg-preview.png'];
+            const randImg = images[Math.floor(Math.random()*images.length)];
             const collectionRef = collection(db, "users");
             const payload = {
               uid: user.uid,
               displayName: displayName,
               email: user.email,
-              photoURL: user.photoURL,
+              photoURL: randImg,
               quiz: {
                 physics: {
                   done: false,

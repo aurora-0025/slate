@@ -1,14 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import navBar from "../components/navBar";
 import styles from "../../styles/mathCourse.module.css"
+import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
+import { db } from "../../firebase/clientApp";
 
 const AreaOfTriangle = ()=>{
-  const {user} = useAuth();
+    const {user} = useAuth();
 
+    const [User, setUser] = useState<any>({userData: null, id:"initial"})
+      
+    const markDone = async()=>{
+       User.userData.courses.maths.area_of_triangles = true;
+       User.userData.courses.maths.completed += 1;
+       User.userData.courses.maths.incomplete -= 1;
+       if(User.userData.progress1 != "maths"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "maths";
+       }
+       
+      await setDoc(doc(db, "users", User.id), User.userData);
+    }
+    const markNotDone = async()=>{
+       User.userData.courses.maths.area_of_triangles = false;
+       User.userData.courses.maths.completed -= 1;
+       User.userData.courses.maths.incomplete += 1;
+       if(User.userData.progress1 != "maths"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "maths";
+       }
+  
+      await setDoc(doc(db, "users", User.id), User.userData);
+    }
+  
+    useEffect(()=> onSnapshot(collection(db, "users"), (snapshot)=> {
+      if(user){
+          snapshot.docs.map(doc => {if(doc.data().uid == user.uid)
+          setUser({ userData: doc.data(), id: (doc.id)});      
+          })
+      }
+  }) , [])  
+  
   return (
-        <>
-        {user ? (
+    <>
+    {User.userData ? (
+    <div>
+        {user ? (            
         <div>
             {navBar({buttonText:"go to dashboard"})}
             </div>
@@ -59,12 +96,16 @@ const AreaOfTriangle = ()=>{
                 <h3>Area of Triangles</h3>
                 <p>by Aurora0025</p>
             </div>
-        <div className={styles.end} >
-            <h2>You have reached the end of the course!</h2>
-            <button>Mark as done.</button>
+            <div className={styles.end}>
+                <h2 className={styles.subhead}>You have reached the end of the course!</h2>
+                {!User.userData.courses.maths.area_of_triangles?(
+                <button onClick={()=>markDone()}>Mark as Done</button>
+                ):(<button onClick={()=>markNotDone()}>Mark as Incomplete</button>)}
+            </div>
         </div>
         </div>
+        ):<div>Loading</div>
+        }
         </>
-  )
-}
+          )}
 export default AreaOfTriangle;

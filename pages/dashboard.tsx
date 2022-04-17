@@ -33,7 +33,7 @@ const Dashboard = () =>{
             <Link href="/"><h1>Slate</h1></Link>
             <div className={styles.sideBarContainer}>
                 <div className={styles.profilePic}>
-                    <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
+                    <img src={User.userData.photoURL} />
                 </div>
                 <p>{User.userData.displayName}</p>
                 <p className={styles.email}>{User.userData.email}</p>

@@ -15,8 +15,10 @@ const HumanBody = ()=>{
        User.userData.courses.biology.cell = true;
        User.userData.courses.biology.completed += 1;
        User.userData.courses.biology.incomplete -= 1;
-       User.userData.progress2 = User.userData.progress1;
-       User.userData.progress1 = "biology";
+       if(User.userData.progress1 != "biology"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "biology";
+       }
        
       await setDoc(doc(db, "users", User.id), User.userData);
     }
@@ -24,8 +26,10 @@ const HumanBody = ()=>{
        User.userData.courses.biology.cell = false;
        User.userData.courses.biology.completed -= 1;
        User.userData.courses.biology.incomplete += 1;
-       User.userData.progress2 = User.userData.progress1;
-       User.userData.progress1 = "biology";
+       if(User.userData.progress1 != "biology"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "biology";
+       }
   
       await setDoc(doc(db, "users", User.id), User.userData);
     }
@@ -152,7 +156,7 @@ const HumanBody = ()=>{
 
         <div className={styles.end}>
                     <h2 className={styles.subhead}>You have reached the end of the course!</h2>
-                    {!User.userData.courses.biology.reflection_of_light?(
+                    {!User.userData.courses.biology.human_body?(
                     <button onClick={()=>markDone()}>Mark as Done</button>
                     ):(<button onClick={()=>markNotDone()}>Mark as Incomplete</button>)}
                 </div>

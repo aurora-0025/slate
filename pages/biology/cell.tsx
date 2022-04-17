@@ -15,8 +15,10 @@ const Cell = ()=>{
        User.userData.courses.biology.cell = true;
        User.userData.courses.biology.completed += 1;
        User.userData.courses.biology.incomplete -= 1;
-       User.userData.progress2 = User.userData.progress1;
-       User.userData.progress1 = "biology";
+       if(User.userData.progress1 != "biology"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "biology";
+       }
        
       await setDoc(doc(db, "users", User.id), User.userData);
     }
@@ -24,8 +26,10 @@ const Cell = ()=>{
        User.userData.courses.biology.cell = false;
        User.userData.courses.biology.completed -= 1;
        User.userData.courses.biology.incomplete += 1;
-       User.userData.progress2 = User.userData.progress1;
-       User.userData.progress1 = "biology";
+       if(User.userData.progress1 != "biology"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "biology";
+       }
   
       await setDoc(doc(db, "users", User.id), User.userData);
     }
@@ -65,7 +69,7 @@ const Cell = ()=>{
           <h2>What defines a cell?</h2>
           <div className={styles.para}>
             <p>
-             All cells are surrounded by a structure called the cell membrane — which, much like the walls of a house, serves as a clear boundary between the cell&apos;s internal and external environments.<br></br><br></br>The cell membrane is sometimes also referred to as the plasma membrane.<br></br><br></br>Cell membranes are based on a framework of fat-based molecules called phospholipids, which physically prevent water-loving, or hydrophilic, substances from entering or escaping the cell.<br></br><br></br>These membranes are also studded with proteins that serve various functions. Some of these proteins act as gatekeepers, determining what substances can and cannot cross the membrane.<br></br><br></br>Nucleic acids are the molecules that contain and help express a cell&apos;s genetic code.<br></br><br></br>There are two major classes of nucleic acids: deoxyribonucleic acid (DNA) and ribonucleic acid (RNA).<br></br><br></br>DNA is the molecule that contains all of the information required to build and maintain the cell<br></br><br></br>RNA has several roles associated with expression of the information stored in DNA.<br></br><br></br>Proteins are a second type of intracellular organic molecule.<br></br><br></br>These substances are made from chains of smaller molecules called amino acids, and they serve a variety of functions in the cell, both catalytic and structural.<br></br><br></br>Carbohydrates, the starches and sugars in cells, are another important type of organic molecule.<br></br><br></br>Simple carbohydrates are used for the cell&apos;s immediate energy demands, whereas complex carbohydrates serve as intracellular energy stores. 
+             All cells are surrounded by a structure called the cell membrane — which, much like the walls of a house, serves as a clear boundary between the cell&#39;s internal and external environments.<br></br><br></br>The cell membrane is sometimes also referred to as the plasma membrane.<br></br><br></br>Cell membranes are based on a framework of fat-based molecules called phospholipids, which physically prevent water-loving, or hydrophilic, substances from entering or escaping the cell.<br></br><br></br>These membranes are also studded with proteins that serve various functions. Some of these proteins act as gatekeepers, determining what substances can and cannot cross the membrane.<br></br><br></br>Nucleic acids are the molecules that contain and help express a cell&#39;s genetic code.<br></br><br></br>There are two major classes of nucleic acids: deoxyribonucleic acid (DNA) and ribonucleic acid (RNA).<br></br><br></br>DNA is the molecule that contains all of the information required to build and maintain the cell<br></br><br></br>RNA has several roles associated with expression of the information stored in DNA.<br></br><br></br>Proteins are a second type of intracellular organic molecule.<br></br><br></br>These substances are made from chains of smaller molecules called amino acids, and they serve a variety of functions in the cell, both catalytic and structural.<br></br><br></br>Carbohydrates, the starches and sugars in cells, are another important type of organic molecule.<br></br><br></br>Simple carbohydrates are used for the cell&#39;s immediate energy demands, whereas complex carbohydrates serve as intracellular energy stores. 
             </p>
           </div>
           <h2>What are the different categories of Cells?</h2>
@@ -94,7 +98,7 @@ const Cell = ()=>{
           
           <div className={styles.end}>
                     <h2 className={styles.subhead}>You have reached the end of the course!</h2>
-                    {!User.userData.courses.biology.reflection_of_light?(
+                    {!User.userData.courses.biology.cell?(
                     <button onClick={()=>markDone()}>Mark as Done</button>
                     ):(<button onClick={()=>markNotDone()}>Mark as Incomplete</button>)}
                 </div>

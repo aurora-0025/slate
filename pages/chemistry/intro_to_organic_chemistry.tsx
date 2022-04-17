@@ -1,22 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import navBar from "../components/navBar";
 import styles from "../../styles/chemCourse.module.css"
+import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
+import { db } from "../../firebase/clientApp";
 
 const IntroToOrganicChemistry = ()=>{
   const {user} = useAuth();
 
-  return (
-    <>
-        {user ? (
-        <div>
-            {navBar({buttonText:"go to dashboard"})}
-            </div>
-        ) : 
-        <div>
-        {navBar({buttonText:"login"})}
-        </div>
-        }
+  const [User, setUser] = useState<any>({userData: null, id:"initial"})
+    
+  const markDone = async()=>{
+     User.userData.courses.chemistry.intro_to_organic_chemistry = true;
+     User.userData.courses.chemistry.completed += 1;
+     User.userData.courses.chemistry.incomplete -= 1;
+     if(User.userData.progress1 != "chemistry"){
+      User.userData.progress2 = User.userData.progress1;
+      User.userData.progress1 = "chemistry";
+     }
+     
+    await setDoc(doc(db, "users", User.id), User.userData);
+  }
+  const markNotDone = async()=>{
+     User.userData.courses.chemistry.intro_to_organic_chemistry = false;
+     User.userData.courses.chemistry.completed -= 1;
+     User.userData.courses.chemistry.incomplete += 1;
+     if(User.userData.progress1 != "chemistry"){
+      User.userData.progress2 = User.userData.progress1;
+      User.userData.progress1 = "chemistry";
+     }
+
+    await setDoc(doc(db, "users", User.id), User.userData);
+  }
+
+  useEffect(()=> onSnapshot(collection(db, "users"), (snapshot)=> {
+    if(user){
+        snapshot.docs.map(doc => {if(doc.data().uid == user.uid)
+        setUser({ userData: doc.data(), id: (doc.id)});      
+        })
+    }
+}) , [])  
+
+return (
+  <>
+  {User.userData ? (
+  <div>
+      {user ? (            
+      <div>
+          {navBar({buttonText:"go to dashboard"})}
+          </div>
+      ) : 
+      <div>
+      {navBar({buttonText:"login"})}
+      </div>
+      }
         <div className={styles.container}>
           <div className={styles.title}>
                   <h1>Introduction To Organic Chemistry</h1>
@@ -74,15 +111,20 @@ const IntroToOrganicChemistry = ()=>{
               <li>Homologous Series – A series of organic compounds in which every succeeding member differs from the previous one called Homologous Series.</li>
             </ol>
           </div> 
-        <div className={styles.end}>
-                    <h2>You have reached the end of the course!</h2>
-                    <button>Mark as done.</button>
-        </div>
         <div className={styles.sign}>
                 <h3>Introduction to Organic Chemistry</h3>
                 <p>by Hipster16</p>
             </div>
+        <div className={styles.end}>
+                <h2 className={styles.subhead}>You have reached the end of the course!</h2>
+                {!User.userData.courses.chemistry.intro_to_organic_chemistry?(
+                <button onClick={()=>markDone()}>Mark as Done</button>
+                ):(<button onClick={()=>markNotDone()}>Mark as Incomplete</button>)}
+            </div>
         </div>
-    </>
-  )}
-export default IntroToOrganicChemistry;
+        </div>
+        ):<div>Loading</div>
+        }
+        </>
+          )}
+    export default IntroToOrganicChemistry;
