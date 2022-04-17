@@ -28,6 +28,7 @@ const Dashboard = () =>{
         <>
         {User.userData ? (
         <div className={styles.mainContainer}>
+        <div className={styles.dash}>
         <div className={styles.sideBar}>
             <Link href="/"><h1>Slate</h1></Link>
             <div className={styles.sideBarContainer}>
@@ -35,7 +36,7 @@ const Dashboard = () =>{
                     <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
                 </div>
                 <p>{User.userData.displayName}</p>
-                <p>{User.userData.email}</p>
+                <p className={styles.email}>{User.userData.email}</p>
                 {/* <Settings size={24} /> */}
                 <div className={styles.sideBarLinks}>
                 </div>
@@ -92,16 +93,19 @@ const Dashboard = () =>{
                                     <img className={styles.phyImg} src="/pages/dashboard/phy.svg" />
                         </div>
                     </Link>
-                    <div className={styles.discoverCard}>
-                        <p>Discover</p>
-                        <div className={styles.discoverSubject}>
-                                <div className={styles.discoverText}>
-                                    <h1>Biology</h1>
-                                    <p>Human Body</p>
-                                </div>
-                                <img src="/pages/biology/courses/HumanBody.svg" style={{width:"60px", height:"60px"}} />
+                        
+                    <Link href={'/biology/cell'}>
+                        <div className={styles.discoverCard}>
+                            <p>Discover</p>
+                            <div className={styles.discoverSubject}>
+                                    <div className={styles.discoverText}>
+                                        <h1>Biology</h1>
+                                        <p>Cell</p>
+                                    </div>
+                                    <img src="/pages/biology/courses/Cell.svg" style={{width:"60px", height:"60px"}} />
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
            </div>
         </section>
@@ -126,6 +130,7 @@ const Dashboard = () =>{
                     </div>
                     </Link>
                 </div>
+
             </div>
             <div className={styles.graphContainer}>
                 <p>Analytics</p>
@@ -134,6 +139,7 @@ const Dashboard = () =>{
                 
             </div>
         </section>
+        </div>
         </div>
         ): <div>loading</div>
     }

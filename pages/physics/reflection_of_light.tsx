@@ -16,8 +16,10 @@ const ReflectionOfLight = ()=>{
      User.userData.courses.physics.reflection_of_light = true;
      User.userData.courses.physics.completed += 1;
      User.userData.courses.physics.incomplete -= 1;
-     User.userData.progress2 = User.userData.progress1;
-     User.userData.progress1 = "physics";
+     if(User.userData.progress1 != "physics"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "physics";
+       }
      
     await setDoc(doc(db, "users", User.id), User.userData);
   }
@@ -25,8 +27,10 @@ const ReflectionOfLight = ()=>{
      User.userData.courses.physics.reflection_of_light = false;
      User.userData.courses.physics.completed -= 1;
      User.userData.courses.physics.incomplete += 1;
-     User.userData.progress2 = User.userData.progress1;
-     User.userData.progress1 = "physics";
+     if(User.userData.progress1 != "physics"){
+        User.userData.progress2 = User.userData.progress1;
+        User.userData.progress1 = "physics";
+       }
 
     await setDoc(doc(db, "users", User.id), User.userData);
   }

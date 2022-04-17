@@ -1,20 +1,40 @@
 .mainContainer {
     position: absolute;
-    display: flex;
-    padding: 30px;
-    height: 100vh;
     width: 100%;
-    /* background: linear-gradient(180deg, rgba(197, 55, 55, 0.5) 15.95%, rgba(220, 161, 71, 0.5) 52.99%, rgba(20, 213, 239, 0.5) 98.26%); */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url("/pages/dashboard/dashbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.dash {
+    position: relative;
+    display: flex;
+    padding: 30px;
+    max-height: 650px;
+    max-width: 1400px;
+
+}
+
 .sideBar > h1 {
     all: unset;
-    font-size: 40px;
-    margin: 10px 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
     cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.email {
+    font-size: 10px;
+    font-weight: 700;
 }
 
 .sideBar {
@@ -48,7 +68,6 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #28D0E7;
 }
 
 .profilePic img {
@@ -75,11 +94,18 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    height: 100%;
+}
+
+.content > h1 {
+    all: unset;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
 }
 
 .banner {
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 10px 40px;
     display: flex;
     background: linear-gradient(271.57deg, #919BF6 1.36%, #97A1FF 97.89%);
