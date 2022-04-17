@@ -75,7 +75,7 @@ const RayOptics = ()=>{
                 The refraction of light when it passes from a rarer medium to a denser medium bends the light ray toward the normal to the boundary between the two media.
             </div>
             <div className={styles.para}>
-                The amount of bending depends on the indices of refraction of the two media and is described quantitatively by Snell's Law.
+                The amount of bending depends on the indices of refraction of the two media and is described quantitatively by Snell&apos;s Law.
             </div>
             <img className={styles.image} src="/pages/physics/courses/rayOptics/ro1.svg" style={{width: "700px", height: "700px"}}/>
             <h2 className={styles.subhead}>Index of Refraction</h2>
@@ -95,12 +95,12 @@ const RayOptics = ()=>{
             
             
 
-            <h2 className={styles.subhead}>Snell's Law</h2>
+            <h2 className={styles.subhead}>Snell&apos;s Law</h2>
             <div className={styles.para}>
-                Snell's Law relates the indices of refraction n of the two media to the directions of propagation in terms of the angles to the normal.
+                Snell&apos;s Law relates the indices of refraction n of the two media to the directions of propagation in terms of the angles to the normal.
             </div>
             <div className={styles.para}>
-                Snell's law can be derived from Fermat's Principle or from the Fresnel Equations.
+                Snell&apos;s law can be derived from Fermat&apos;s Principle or from the Fresnel Equations.
             </div>
             <img className={styles.image} src="/pages/physics/courses/rayOptics/ro2.svg" style={{ width: "100", height: "100"}}/>
 

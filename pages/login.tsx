@@ -72,7 +72,7 @@ const Login = () =>{
             <input type="submit" value="Login" />
           </div>
         </form>
-        <p>Not Registred Yet? <a className={styles.Link} href='/signup'>Create an account.</a></p>
+        <p>Not Registred Yet? <Link href='/signup'><div className={styles.Link}>Create an account.</div></Link></p>
       </div>
     )
 }
