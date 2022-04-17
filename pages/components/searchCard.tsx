@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
+import styles from '../../styles/search.module.css'
 
 function Card({course}) {
   return(
-    <div className="cardContainer">
-      <Link href={`/${course.subject}/${course.course}`}>
-      <div style={{margin:"5px", backgroundColor:"#DCDBDB", borderRadius: "12px", padding: "0px 10px", cursor:"pointer"}}>
-        <h2 style={{fontSize: "20px"}}>{course.course}</h2>
+    <div className={styles.searchCard}>
+      <Link passHref href={`/${course.subject}/${course.course}`}>
+      <div>
+        <h2>{course.course}</h2>
         <p>{course.subject}</p>
       </div>
       </Link>

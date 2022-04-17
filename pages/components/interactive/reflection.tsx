@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState, useCallback } from 'react'
 
 const ReflectionInteractive = props => {
 
@@ -15,36 +15,44 @@ const ReflectionInteractive = props => {
       }
   
   const canvasRef = useRef(null)
-  
-  const draw = (ctx: CanvasRenderingContext2D, frameCount) => {
-    let angle = slider;
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-    ctx.lineWidth = 10;
-    ctx.fill()
-    ctx.beginPath()
-    ctx.moveTo(0, 100);
-    ctx.lineTo(200, 100);
-    ctx.stroke();   
-    ctx.closePath();
-    ctx.beginPath()
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = "#FA6C32";
-    canvas_arrow(ctx, 100 - 100 * Math.cos(Math.PI * (90-angle) / 180.0), 100 - 100 * Math.sin(Math.PI * (90-angle) / 180), 100, 95,);
-    ctx.stroke();   
-    ctx.closePath();
 
-    ctx.beginPath()
-    canvas_arrow(ctx, 100, 95, 100 - (100 * Math.cos(Math.PI * (90 + +angle) / 180.0)), 100 - (100 * Math.sin(Math.PI * (90 + +angle) / 180)));
-    ctx.stroke();   
-    ctx.closePath();
-    ctx.strokeStyle = "#000";
-    ctx.beginPath()
-    ctx.lineWidth = 1;
-    ctx.moveTo(100, 100);
-    ctx.lineTo(100, 0);
-    ctx.stroke();   
-    ctx.closePath();
-  }
+  const [slider, setSlider] = useState(30);
+  
+  const draw = useCallback(
+    (ctx, frameCount) => {
+      (ctx: CanvasRenderingContext2D, frameCount) => {
+        let angle = slider;
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+        ctx.lineWidth = 10;
+        ctx.fill()
+        ctx.beginPath()
+        ctx.moveTo(0, 100);
+        ctx.lineTo(200, 100);
+        ctx.stroke();   
+        ctx.closePath();
+        ctx.beginPath()
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#FA6C32";
+        canvas_arrow(ctx, 100 - 100 * Math.cos(Math.PI * (90-angle) / 180.0), 100 - 100 * Math.sin(Math.PI * (90-angle) / 180), 100, 95,);
+        ctx.stroke();   
+        ctx.closePath();
+    
+        ctx.beginPath()
+        canvas_arrow(ctx, 100, 95, 100 - (100 * Math.cos(Math.PI * (90 + +angle) / 180.0)), 100 - (100 * Math.sin(Math.PI * (90 + +angle) / 180)));
+        ctx.stroke();   
+        ctx.closePath();
+        ctx.strokeStyle = "#000";
+        ctx.beginPath()
+        ctx.lineWidth = 1;
+        ctx.moveTo(100, 100);
+        ctx.lineTo(100, 0);
+        ctx.stroke();   
+        ctx.closePath();
+      }
+    },
+    [slider],
+  )
+  
   
   useEffect(() => {
     const canvas : HTMLCanvasElement = canvasRef.current
@@ -68,7 +76,6 @@ const ReflectionInteractive = props => {
     }
   }, [draw])
 
-  const [slider, setSlider] = useState(30);
   const onSlide = (e) => {
       setSlider(e.target.value)
   } 

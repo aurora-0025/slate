@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/clientApp";
 
+
 const Physics = ()=>{
   const {user} = useAuth();
 
@@ -18,7 +19,7 @@ const Physics = ()=>{
         setUser({ userData: doc.data(), id: (doc.id)});      
         })
     }
-}) , [])  
+}) , [user])  
 
     return (
         <>
@@ -34,31 +35,31 @@ const Physics = ()=>{
         <div className={styles.main}>
             <h1>Physics</h1>
             <div className={styles.coursesContainer}>
-                <Link href="/physics/reflection_of_light">
+                <Link href="/physics/reflection_of_light" passHref>
                 <div className={styles.course}>
                     <div className={styles.shape}>Easy</div>
                     <div className={styles.cDesc}>
                         <h2>Reflection Of Light</h2>
                         <p>Reflection is when light bounces off an object. If the surface is smooth and shiny, like glass, water or polished metal, the light will reflect at the same angle as it hit the surface.</p>
                     </div>
-                    <img src="/pages/physics/courses/reflectionOfLight.svg" />
+                    <img alt="" src="/pages/physics/courses/reflectionOfLight.svg" />
                 </div>
                 </Link>
-                <Link href="/physics/ray_optics">
+                <Link passHref href="/physics/ray_optics">
                 <div className={styles.course}>
                     <div className={styles.shape}>Medium</div>
                     <div className={styles.cDesc}>
                         <h2>Ray Optics</h2>
                         <p>Using the basic laws of reflection and refraction, we shall study the image formation by plane and spherical reflecting and refracting surfaces.</p>
                     </div>
-                    <img src="/pages/physics/courses/rayOptics.svg" />
+                    <img alt="" src="/pages/physics/courses/rayOptics.svg" />
                 </div>
                 </Link>
                 {user && User.userData ?(
                     <div>
                     {!User.userData.quiz.physics.done?
                     <div className={styles.end}>
-                        <Link href="/quiz/physics"><button>Take A Quiz</button></Link>
+                        <Link href="/quiz/physics" passHref><button>Take A Quiz</button></Link>
                     </div>
                     : 
                     <div className={styles.completed}>

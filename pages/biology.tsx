@@ -4,6 +4,7 @@ import navBar from "./components/navBar";
 import styles from "../styles/biologySubject.module.css"
 import Link from "next/link";
 
+
 const Biology = ()=>{
   const {user} = useAuth();
 
@@ -21,28 +22,28 @@ const Biology = ()=>{
         <div className={styles.main}>
             <h1>biology</h1>
             <div className={styles.coursesContainer}>
-                <Link href="/biology/cell">
+                <Link href="/biology/cell" passHref>
                 <div className={styles.course}>
                     <div className={styles.shape}>Easy</div>
                     <div className={styles.cDesc}>
                         <h2>Cell</h2>
                         <p>Cell, the smallest unit that can live on its own and that makes up all living organisms and the tissues of the body.Cells are called the building blocks of life.</p>
                     </div>
-                    <img src="/pages/biology/courses/cell.svg" alt="" />
+                    <img alt="" src="/pages/biology/courses/cell.svg" />
                 </div>
                 </Link>
-                <Link href="/biology/human_body">
+                <Link href="/biology/human_body" passHref>
                 <div className={styles.course}>
                     <div className={styles.shape}>Medium</div>
                     <div className={styles.cDesc}>
                         <h2>Human Body</h2>
                         <p>Human body parts comprise a head, neck and four limbs that are connected to a torso. Giving the body its shape is the skeleton, which is composed of cartilage and bone.</p>
                     </div>
-                    <img src="/pages/biology/courses/HumanBody.svg" alt="" />
+                    <img alt="" src="/pages/biology/courses/HumanBody.svg" />
                 </div>
                 </Link>
                 <div className={styles.end}>
-					<Link href="/quiz/biology"><button>Take A Quiz</button></Link>
+					<Link href="/quiz/biology" passHref><button>Take A Quiz</button></Link>
                 </div>
             </div>
         </div>

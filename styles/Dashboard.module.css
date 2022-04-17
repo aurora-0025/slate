@@ -8,15 +8,21 @@
     background-image: url("/pages/dashboard/dashbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .dash {
     position: relative;
+    border-radius: 25px;
     display: flex;
     padding: 30px;
     max-height: 650px;
-    max-width: 1400px;
-
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
 }
 
 .sideBar > h1 {
@@ -39,7 +45,7 @@
 
 .sideBar {
     background-color: #C4C4C4;
-    width: 150px;
+    width: 200px;
     margin-right: 10px;
     flex: 0.65;
     display: flex;
@@ -65,16 +71,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
 }
 
 .profilePic img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-
+    width: 150px;
+    height: 150px;
+    border-radius: 0%;
 }
 .sideBarLinks {
     flex: 1;
@@ -115,10 +117,6 @@
     align-items: center;
 }
 
-.banner > h1 {
-    max-width: 60%;
-}
-
 .banner > button {
     font-weight: 800;
     border: none;
@@ -150,26 +148,35 @@
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 20px 5px;
     color: #ffff;
+    min-width: 280px;
     margin-right: 10px;
 }
 
 .achievementHead {
     display: flex;
-    justify-content: space-between;
 }
 
 .achievementTitle {
     all: unset;
-    font-size: 26px;
+    font-size: 16px;
     font-weight: 200;
 }
 
 .achievementBody {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+}
+
+.achievementBody > img {
+    height: 80px;
+}
+
+.achievementBody > h2 {
+    all: unset;
+    font-size: 12x;
 }
 
 .mathsCard {
@@ -182,6 +189,7 @@
     color: white;
     font-size: 16px;
     font-weight: 200;
+    min-width: 180px
 }
 
 .mathImg{
@@ -208,11 +216,18 @@
     border-radius: 12px;
 }
 
-.progressCard1 > h2, .progressCard2 > h2{
+.progressCard1 > h2{
     max-width: 50%;
     padding-bottom: 20px;
     font-size: 16px;
     font-weight: 200;
+}
+
+.progressCard2 > h2 {
+    max-width: 50%;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .progressCard1 > p, .progressCard2 > p{
@@ -238,26 +253,28 @@
     margin-top: 5px;
     margin-left: 10px;
     border-radius: 12px;
+    min-width: 200px;
 }
 
 .cardsRow2 {
     flex: 1;
     margin-top: 5px;
     display: flex;
+    min-height: 150px;
 }
 
 .physicsCard {
-    color: #000;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    padding: 0 10px;
-    font-size: 16px;
-    font-weight: 800;
     min-width: 200px;
     background: linear-gradient(271.57deg, #6BA9BE 1.36%, #B5DFED 97.89%);
     box-shadow: inset 6px 6px 16px rgba(255, 255, 255, 0.29), inset 28px 28px 54px rgba(255, 255, 255, 0.15), inset -28px -28px 54px rgba(0, 0, 0, 0.14);
 }
+
 
 .phyImg {
     position: absolute;
@@ -271,29 +288,33 @@
     border-radius: 12px;
     background-color: #F3B62D;
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .discoverCard > p {
     all: unset;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-weight: 800;
-    padding: 10px;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 600;
     color: #414141;
 }
 
 .discoverSubject {
     all:unset;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 10px;
-    padding-top: 10px;
     color: #414141;
+}
+
+.discoverSubject > img{
+    background-color: #323232;
+    width: 110px;
+    border-radius: 8px;
 }
 
 .discoverText > h1 {
@@ -310,15 +331,7 @@
     max-width: 200px;
 }
 
-.discoverSubject > img{
-    background-color: #323232;
-    width: 450px;
-    height: 450px;
-    border-radius: 3px;
-}
-
 .rightSection {
-    flex: 1;
     display: flex;
     flex-direction: column;
     color: #000;
@@ -334,15 +347,13 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(20px);
-    /* Note: backdrop-filter has minimal browser support */
-    
+    backdrop-filter: blur(20px);    
     border-radius: 25px;
 }
 
 .suggestionsContainer > p {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .suggestions {
@@ -375,6 +386,9 @@
 }
 
 .graphContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     flex: 1;
     padding: 10px;
     background-color: #C4C4C4;
@@ -384,10 +398,19 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(20px);
-    /* Note: backdrop-filter has minimal browser support */
-    
+    backdrop-filter: blur(20px);    
     border-radius: 25px;
+}
+
+.graphContainer > p{
+    all: unset;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.graphContainer > div {
+    padding-top:50px;
+    flex: 2;
 }
 
 .achievementCard, .mathsCard, .progressCard1,

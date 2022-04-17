@@ -2,11 +2,12 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { auth } from "../firebase/clientApp";
+import { useRouter } from "next/router";
+
 
 const AuthContext = createContext<any>({});
 
 export const useAuth = () => useContext(AuthContext)
-
 
 export const AuthContextProvider = ({children} : {children: React.ReactNode}) =>{
 
@@ -40,6 +41,7 @@ export const AuthContextProvider = ({children} : {children: React.ReactNode}) =>
     const logIn = (email: string, password: string) => {
         signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
             // Signed in 
+            useRouter().push('/')
             const user = userCredential.user;
             return user;
           }).catch((error)=>{

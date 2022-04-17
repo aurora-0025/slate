@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 
+
 const RayOptics = ()=>{
 
     const {user} = useAuth();
@@ -41,7 +42,7 @@ const RayOptics = ()=>{
           setUser({ userData: doc.data(), id: (doc.id)});      
           })
       }
-  }) , [])  
+  }) , [user])  
 
   return (
     <>
@@ -77,7 +78,7 @@ const RayOptics = ()=>{
             <div className={styles.para}>
                 The amount of bending depends on the indices of refraction of the two media and is described quantitatively by Snell&#39;s Law.
             </div>
-            <img className={styles.image} src="/pages/physics/courses/rayOptics/ro1.svg" style={{width: "700px", height: "700px"}}/>
+            <img alt="" className={styles.image} src="/pages/physics/courses/rayOptics/ro1.svg" style={{width: "700px", height: "700px"}}/>
             <h2 className={styles.subhead}>Index of Refraction</h2>
             <div className={styles.para}>
                 The index of refraction is defined as the speed of light in vacuum divided by the speed of light in the medium.
@@ -85,7 +86,7 @@ const RayOptics = ()=>{
             <div className={styles.para}>
                 It is derived from the given formula below:
             </div>
-            <img className={styles.image} src="/pages/physics/courses/rayOptics/ro1_2.svg" style={{width: "150px", height:"150px"}}/>
+            <img alt="" className={styles.image} src="/pages/physics/courses/rayOptics/ro1_2.svg" style={{width: "150px", height:"150px"}}/>
             <div className={styles.para}>
                 The indices of refraction of some common substances are given below.
             </div>
@@ -102,7 +103,7 @@ const RayOptics = ()=>{
             <div className={styles.para}>
                 Snell&#39;s law can be derived from Fermat&#39;s Principle or from the Fresnel Equations.
             </div>
-            <img className={styles.image} src="/pages/physics/courses/rayOptics/ro2.svg" style={{ width: "100", height: "100"}}/>
+            <img alt="" className={styles.image} src="/pages/physics/courses/rayOptics/ro2.svg" style={{ width: "100", height: "100"}}/>
 
             <h2 className={styles.subhead}>Laws of Refraction</h2>
             <div className={styles.para}>
@@ -129,7 +130,7 @@ const RayOptics = ()=>{
             </div>
 
             <h2 className={styles.subhead}>Total Internal Reflection</h2>
-            <img className={styles.image} src="/pages/physics/courses/rayOptics/ro3.svg"/>
+            <img alt="" className={styles.image} src="/pages/physics/courses/rayOptics/ro3.svg"/>
             <div className={styles.para}>
                 When a ray of light travelling from denser medium to rarer medium is incident at the interface of two medium at an angle greater than the critical angle for the two media, the ray is totally reflected back to denser medium.
             </div>

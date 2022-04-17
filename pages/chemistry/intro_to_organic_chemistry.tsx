@@ -5,6 +5,7 @@ import styles from "../../styles/chemCourse.module.css"
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 
+
 const IntroToOrganicChemistry = ()=>{
   const {user} = useAuth();
 
@@ -39,7 +40,7 @@ const IntroToOrganicChemistry = ()=>{
         setUser({ userData: doc.data(), id: (doc.id)});      
         })
     }
-}) , [])  
+}) , [user])  
 
 return (
   <>
@@ -71,7 +72,7 @@ return (
               <li>Tetravalency and small size – Carbon exhibits’ tetravalency. The tetravalency of carbon can be satisfied by forming bonds with carbon, hydrogen or other atoms. The carbon atom has 4 electrons in its valence shell. In order to account tetravalency it is believed during the process of bond formation which is energy-releasing process the two electrons in the 2s orbital get unpaired and out of them, one is promoted to empty orbital.</li>
             </ol>
           </div>
-          <img src="/pages/chemistry/courses/introductionToOrganicChemistry/ioc1.svg" className={styles.image} />
+          <img alt="" src="/pages/chemistry/courses/introductionToOrganicChemistry/ioc1.svg" className={styles.Image} />
           <h2>Structural Representations of Organic Compounds</h2>
           <div className={styles.ol}>
             <ol>
@@ -83,12 +84,12 @@ return (
           <h2>Classification of Organic Compounds</h2>
           <div className={styles.ol}>
               <ol>
-                  <li>Acyclic or Open Chain Compounds & Alicyclic or Closed Chain or Ring Compounds – Organic compounds are classified as open-chain compounds and closed chain compounds in terms of the carbon chain. Also termed as Organic Compounds Acyclic or Open Chain or Aliphatic Compounds Cyclic or Closed Chain or Ring Compounds Alkanes Alkenes Alkynes</li>
+                  <li>Acyclic or Open Chain Compounds &#38; Alicyclic or Closed Chain or Ring Compounds – Organic compounds are classified as open-chain compounds and closed chain compounds in terms of the carbon chain. Also termed as Organic Compounds Acyclic or Open Chain or Aliphatic Compounds Cyclic or Closed Chain or Ring Compounds Alkanes Alkenes Alkynes</li>
                   <li>Aromatic Compounds – Plants and micro-organisms have an exclusive route to benzene-ring compounds. The great majority of aromatic compounds in nature, therefore, are produced by plants and microorganisms, and animals are dependent upon plants for many aromatic compounds either directly or Indirectly.</li>
                   <li>Heterocyclic Aromatic Compounds – In the twentieth century it is witnessed that the first inorganic heteroaromatic compound produced in the laboratory. Some of these heterocyclic aromatic compounds are very important in biochemical processes, drugs, and agrochemicals.</li>
               </ol>
           </div>
-          <img src="/pages/chemistry/courses/introductionToOrganicChemistry/ioc2.svg" className={styles.image} />
+          <img alt="" src="/pages/chemistry/courses/introductionToOrganicChemistry/ioc2.svg" className={styles.Image}/>
          <h2>Nomenclature of Organic Compounds</h2>
           <div className={styles.ol}>
             <ol>
@@ -100,7 +101,7 @@ return (
           <div className={styles.ol}>
             <ol>
               <li>Structural Isomerism – Structural Isomerism arises due to different arrangement of atoms within the molecule. Two molecules are structural isomers if they share the same molecular formula.</li>
-              <li>Stereoisomerism – Stereo-isomers are isomeric molecules having the same molecular formula and the same sequence of bonded atoms, but are only different in the 3D orientations of their atoms in space. Stereoisomerism may be of two types viz. geometrical (or c\s-trans) isomerism and optical (or d-1 or mirror-image) isomerism.</li>
+              <li>Stereoisomerism – Stereo-isomers are isomeric molecules having the same molecular formula and the same sequence of bonded atoms, but are only different in the 3D orientations of their atoms in space. Stereoisomerism may be of two types viz. geometrical (or c\s-trans) isomerism and optical (or d-1 or mirror-Image) isomerism.</li>
             </ol>
           </div>
           <h2>Fundamental Concepts in Organic Reaction Mechanism</h2>

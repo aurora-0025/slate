@@ -23,10 +23,11 @@ const Login = () =>{
           const user = userCredential.user;
           router.push('/dashboard')
         }).catch((error)=>{
+          console.log(error.code);
           let errorMsg = ''
           switch (error.code) {
             case 'auth/email-already-exists':
-              errorMsg = "Account Already Exists with that email"
+              errorMsg = "An Account Already Exists with that email"
               break;
             case 'auth/internal-error':
               errorMsg = "Internal Error"
@@ -40,6 +41,9 @@ const Login = () =>{
             case 'auth/wrong-password':
               errorMsg = "Wrong Password"
               break;
+            case 'auth/user-not-found':
+              errorMsg = "User not found"
+              break;
             default:
               errorMsg = "error"
               console.log(error.message);
@@ -52,7 +56,7 @@ const Login = () =>{
 
     return (
       <div className={styles.loginForm}>
-        <Link href="/"><ArrowLeft size={32} className={styles.backButton} /></Link>
+        <Link href="/" passHref><ArrowLeft size={32} className={styles.backButton} /></Link>
         <h2>Login</h2>
         <p>Login to access all features of Slate.</p>
         <form onSubmit={handleLogin}>
@@ -72,7 +76,7 @@ const Login = () =>{
             <input type="submit" value="Login" />
           </div>
         </form>
-        <p>Not Registred Yet? <Link href='/signup'><div className={styles.Link}>Create an account.</div></Link></p>
+        <p>Not Registred Yet? <Link href='/signup' passHref><div className={styles.Link}>Create an account.</div></Link></p>
       </div>
     )
 }

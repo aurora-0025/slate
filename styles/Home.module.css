@@ -14,32 +14,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-/* .riseToTop  img {
-  margin-left: -70px;
-} */
-.slateDesc[data-aos] {
-  visibility: hidden;
-}
-.slateDesc[data-aos].animated {
-  visibility: visible;
+.riseToTop h2 {
+  font-size: 46px;
 }
 
 .slateDesc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 1s ease-in-out;
+  width: 100%;
+  height: 600px;
+  margin-top: 50px;
+  position: relative;
 }
 
 .slateDesc > img {
-  margin-left: -80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
 }
 
 .slateContent{
-  margin-top: -100px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  right: 50%;
+  width: 45%;
+  transform: translateX(50%);
+  text-align: right;
+}
+
+.slateContent > h1 {
+  all: unset;
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.slateContent > p {
+  font-size: 24px;
 }
 
 .courses {

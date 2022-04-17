@@ -4,6 +4,7 @@ import navBar from "../components/navBar";
 import styles from "../../styles/mathCourse.module.css"
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
+import Image  from "next/image";
 
 const PythagorasTheorem = ()=>{
     const {user} = useAuth();
@@ -39,7 +40,7 @@ const PythagorasTheorem = ()=>{
           setUser({ userData: doc.data(), id: (doc.id)});      
           })
       }
-  }) , [])  
+  }) , [user])  
   
   return (
     <>
@@ -77,16 +78,16 @@ const PythagorasTheorem = ()=>{
                 <div className={styles.para}>
                     According to the definition, the Pythagoras Theorem formula is given as:
                 </div>
-                <img className={styles.image} src="/pages/maths/courses/pythagorasTheorem/pt1.svg"/>
+                <img alt="" className={styles.image} src="/pages/maths/courses/pythagorasTheorem/pt1.svg"/>
                 <h2>Proof</h2>
-                <img className={styles.image} src="/pages/maths/courses/pythagorasTheorem/pt2.svg"/>
+                <img alt="" className={styles.image} src="/pages/maths/courses/pythagorasTheorem/pt2.svg"/>
                 <div className={styles.para}>
                     We know, △ADB ~ △ABC
                 </div>
                 <div className={styles.para}>
                     Therefore,
                 </div>
-                <img src="" className={styles.image}/>
+                <img alt="" src="" className={styles.image}/>
                 <div className={styles.para}>
                     (corresponding sides of similar triangles)
                 </div>

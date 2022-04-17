@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 
+
 const ReflectionOfLight = ()=>{
   const {user} = useAuth();
 
@@ -41,7 +42,7 @@ const ReflectionOfLight = ()=>{
         setUser({ userData: doc.data(), id: (doc.id)});      
         })
     }
-}) , [])  
+}) , [user])  
     return (
         <>
         {User.userData ? (
@@ -66,7 +67,7 @@ const ReflectionOfLight = ()=>{
                 <div className={styles.para}>
                     Reflection of Light is the process of sending back the light rays which falls on the surface of an object
                 </div>
-                <img className={styles.image} src="/pages/physics/courses/reflectionOfLight/rol1.svg" style={{width: "500px", height: "500px"}}/>
+                <img alt="" className={styles.image} src="/pages/physics/courses/reflectionOfLight/rol1.svg" style={{width: "500px", height: "500px"}}/>
                 <h2 className={styles.subhead}>Reflection of Light from plane mirror</h2>
                 <div className={styles.para}>
                     Before understanding the laws of reflection of light, lets understand the meaning of some important terms such as, <b>incident ray, reflected ray, point of incidence, <b>normal</b> (at the point of incidence)</b>, <b>angle of incidence and angle of reflection.</b>
@@ -110,7 +111,7 @@ const ReflectionOfLight = ()=>{
                 <div className={styles.para}>The change of sides of an object in its mirror image is called <b>lateral inversion</b>. It happens due to reflection of light.</div>
 
                 <h2 className={styles.subhead}>Formation of image in a plane mirror</h2>
-                <img className={styles.image} src="/pages/physics/courses/reflectionOfLight/rol3.svg" style={{width: "500px", height: "500px"}}/>
+                <img alt="" className={styles.image} src="/pages/physics/courses/reflectionOfLight/rol3.svg" style={{width: "500px", height: "500px"}}/>
                 <div className={styles.para}>The nature of image formed by a plane mirror is:</div>
                 <div className={styles.ul}>
                     <ul>

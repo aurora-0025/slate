@@ -6,7 +6,7 @@ import ProtectedRoute from './components/protectedRoute'
 
 function MyApp({ Component, pageProps }) {
 
-  const noAuthRequired = ['/login', '/signup', '/', '/physics', '/chemistry', '/biology', 'maths']
+  const noAuthRequired = ['/login', '/signup', '/', '/physics', '/chemistry', '/biology', '/maths']
 
   const router = useRouter()
 

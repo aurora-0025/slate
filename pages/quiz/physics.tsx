@@ -20,7 +20,7 @@ const PhysicsTest = () => {
 		}
 	
 
-	}) , [])
+	}) , [user])
 
 	const questions = [
 		{
@@ -163,7 +163,7 @@ const PhysicsTest = () => {
 				{ User.userData.quiz.physics.done ? (
 					<div>
 						<p>You have already attended this quiz.</p>	
-						<Link href="/dashboard"><button className={styles.endButton}>Proceed</button></Link>
+						<Link href="/dashboard" passHref><button className={styles.endButton}>Proceed</button></Link>
 					</div>
 				) : (
 					<div>
@@ -182,7 +182,7 @@ const PhysicsTest = () => {
 					</div>
 					<div className={styles.answerSection}>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button key={questions[currentQuestion].questionText} className={styles.button} onClick={() => handleAnswerOptionClick(answerOption, questions[currentQuestion])}>{answerOption.answerText}</button>
+							<button className={styles.button} onClick={() => handleAnswerOptionClick(answerOption, questions[currentQuestion])}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</div>

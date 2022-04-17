@@ -5,6 +5,7 @@ import styles from "../../styles/mathCourse.module.css"
 import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 
+
 const AreaOfTriangle = ()=>{
     const {user} = useAuth();
 
@@ -39,7 +40,7 @@ const AreaOfTriangle = ()=>{
           setUser({ userData: doc.data(), id: (doc.id)});      
           })
       }
-  }) , [])  
+  }) , [user])  
   
   return (
     <>
@@ -71,7 +72,7 @@ const AreaOfTriangle = ()=>{
         <div>
             The general formula to find the area of the triangle is given by half of the product of its base and height.
         </div>
-        <img src="/pages/maths/courses/areaOfTriangles/aot1.svg" className={styles.image} />
+        <img alt="" src="/pages/maths/courses/areaOfTriangles/aot1.svg" className={styles.image} />
         <div>
             However this is only applicable to right angled triangles
         </div>
@@ -79,19 +80,19 @@ const AreaOfTriangle = ()=>{
         <div>
             An equilateral triangle is a triangle where all sides are equal and all angles are equal to 60°.
         </div>
-        <img src="/pages/maths/courses/areaOfTriangles/aot2.svg" className={styles.image} />
+        <img alt="" src="/pages/maths/courses/areaOfTriangles/aot2.svg" className={styles.image} />
         <h2>Isosceles Triangle</h2>
         <div>
             An isosceles triangle has two of its sides equal and also the angles opposite the equal sides are equal.
         </div>
-        <img src="/pages/maths/courses/areaOfTriangles/aot3.svg" className={styles.image} />
+        <img alt="" src="/pages/maths/courses/areaOfTriangles/aot3.svg" className={styles.image} />
         <h2>Scalene Triangle (Heron’s Formula)</h2>
         <div>
             <p>
                 The area of a triangle with 3 sides of different measures can be found using Heron’s formula.<br></br><br></br>Heron’s formula includes two important steps. The first step is to find the semi perimeter of a triangle by adding all the three sides of a triangle and dividing it by 2.<br></br><br></br>The next step is that, apply the semi-perimeter of triangle value in the main formula called “Heron’s Formula” to find the area of a triangle.
             </p>
         </div>
-        <img src="/pages/maths/courses/areaOfTriangles/aot4.svg" className={styles.image} />
+        <img alt="" src="/pages/maths/courses/areaOfTriangles/aot4.svg" className={styles.image} />
         <div className={styles.sign}>
                 <h3>Area of Triangles</h3>
                 <p>by Aurora0025</p>

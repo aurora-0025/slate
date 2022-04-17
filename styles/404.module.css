@@ -8,11 +8,15 @@
     align-items: center;
 }
 
-.container > button {
+.backButton {
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: none;
+    display: flex;
+    align-items: center;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .imageContainer {
