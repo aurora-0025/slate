@@ -110,7 +110,7 @@ const Dashboard = () =>{
                                         <h1>Biology</h1>
                                         <p>Cell</p>
                                     </div>
-                                    <img src="/pages/biology/courses/Cell.svg" />
+                                    <img alt='' src="/pages/biology/courses/Cell.svg" />
                             </div>
                         </div>
                     </Link>
