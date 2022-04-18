@@ -8,7 +8,7 @@ import initialDetails from '../lib/searchDetails';
 import {Settings} from '@carbon/icons-react'
 import Link from 'next/link';
 import {Logout} from '@carbon/icons-react'
-import barChart from './components/BarChart';
+import barChart from './components/Chart';
 import { useRouter } from 'next/router';
 
 
@@ -43,6 +43,10 @@ const Dashboard = () =>{
                 <p>{User.userData.displayName}</p>
                 <p className={styles.email}>{User.userData.email}</p>
                 <div className={styles.sideBarLinks}>
+                    <Link passHref href="/physics"><p>Physics</p></Link>
+                    <Link passHref href="/chemistry"><p>Chemistry</p></Link>
+                    <Link passHref href="/maths"><p>Maths</p></Link>
+                    <Link passHref href="/biology"><p>Biology</p></Link>
                 </div>
             </div>
             <Link passHref href="/" ><button className={styles.logoutButton} onClick={()=> { logOut();}}><Logout size={16} />Logout</button></Link>
@@ -136,10 +140,11 @@ const Dashboard = () =>{
                 </div>
 
             </div>
+            <Link passHref href={"/analytics"}>
             <div className={styles.graphContainer}>
                 <p>Analytics</p>
-            {barChart({userData: User.userData})}
-            </div>
+                {barChart({userData: User.userData})}
+            </div></Link>
         </section>
         </div>
         </div>

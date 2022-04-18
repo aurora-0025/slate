@@ -1,0 +1,12 @@
+.container {
+    margin: 100px 100px 0 100px;
+}
+
+.container > h2 {
+    color: rgb(146, 141, 141);
+    font-weight: 400;
+}
+
+.chartData > div{
+    width: 400px;
+}

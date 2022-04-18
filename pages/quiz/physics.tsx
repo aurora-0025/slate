@@ -182,7 +182,7 @@ const PhysicsTest = () => {
 					</div>
 					<div className={styles.answerSection}>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button id={answerOption.answerText} className={styles.button} onClick={() => handleAnswerOptionClick(answerOption, questions[currentQuestion])}>{answerOption.answerText}</button>
+							<button key={answerOption.answerText} className={styles.button} onClick={() => handleAnswerOptionClick(answerOption, questions[currentQuestion])}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</div>
