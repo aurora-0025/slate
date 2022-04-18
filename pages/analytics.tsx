@@ -103,7 +103,7 @@ return (
           {Test ?(
             <div>
             {Test.map((quiz)=>{
-             return <div className={styles.chartData}>
+             return <div key={quiz} className={styles.chartData}>
                <h2>{quiz.name}</h2>
                 {DonutChart({quizData: quiz})}
                </div>
