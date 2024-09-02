@@ -1,5 +1,6 @@
-# slate
-
+<p align="center">
+  <img width="150" alt="favicon" src="https://github.com/aurora-0025/slate/blob/master/slate.png?raw=true">
+</p>
 
 https://user-images.githubusercontent.com/78461388/163595953-d752026c-48d9-404f-9036-25bce457356e.mp4
 
